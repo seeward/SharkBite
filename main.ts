@@ -471,6 +471,9 @@ f b b b 1 1 1 1 f f 1 b c b c b b b c c c c c c c b b b c f . .
 `)
     mouthOpen = 0
 })
+controller.menu.onEvent(ControllerButtonEvent.Pressed, function () {
+    game.splash("Paused")
+})
 // when sharky overlaps with food
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     if (mouthOpen == 1) {
